@@ -6,8 +6,8 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/ConceptualExample.cpp ConceptualExample)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/Vehicles.cpp Vehicles)
+add_library(ConceptualExample ${CMAKE_CURRENT_SOURCE_DIR}/ConceptualExample.cpp)
+add_library(Vehicles ${CMAKE_CURRENT_SOURCE_DIR}/Vehicles.cpp)
 
 add_executable(example ${CMAKE_CURRENT_SOURCE_DIR}/Program.cpp)
 
