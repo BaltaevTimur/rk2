@@ -1,5 +1,5 @@
 name: actions
-run-name: BaltaevTimur is running lab04
+run-name: BaltaevTimur is running rk2_3
 on: [push]
 jobs:
   container-job:
@@ -7,4 +7,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: test
-        run: ./.github/workflows/test1.sh
+        run: ./.github/workflows/test.sh
