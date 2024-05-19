@@ -1,6 +1,5 @@
 root=./
 
-cmake --build $root/ConceptualExample.cpp
-cmake --build $root/Vehicles.cpp
+cmake --build $root
 
 $root/_build/example
