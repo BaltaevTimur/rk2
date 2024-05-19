@@ -1,5 +1,5 @@
 root=./
 
-cmake --build $root/example
+cmake --build $root
 
 $root/_build/example
