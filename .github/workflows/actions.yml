@@ -1,0 +1,21 @@
+name: Actions_for_tests
+
+on:
+ push:
+  branches: [master]
+ pull_request:
+  branches: [master]
+
+jobs: 
+ build_Linux:
+
+  runs-on: ubuntu-latest
+
+  steps:
+  - uses: actions/checkout@v3
+
+  - name: Config Program
+    run: cmake -H. -B ${{github.workspace}}/build -DBUILD_TESTS=ON
+
+  - name: Build Program
+    run: cmake --build ${{github.workspace}}/build
