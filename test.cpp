@@ -1,4 +1,4 @@
-#include <ConceptualExample.cpp>
+#include "ConceptualExample.cpp"
 #include <gtest/gtest.h>
 
 TEST(ConcreteProductA1, example){
