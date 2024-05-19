@@ -27,5 +27,6 @@ jobs:
       - name: Make a release
         uses: ncipollo/release-action@v1.10.0
         with:
+          tag: v1.0.0
           artifacts: "build/*.deb,build/*.tar.gz,build/*.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
