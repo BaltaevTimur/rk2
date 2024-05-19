@@ -2,6 +2,8 @@ name: CPack
 
 on:
   push:
+    tags:
+     - v**
     branches: [main]
   pull_request:
     branches: [main]
@@ -11,13 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
-      - name: Get Version
-        id: get_version
-        run: echo "::set-output name=version::${GITHUB_REF#refs/tags/v}"
-
+      
       - name: Config ConceptualExample
-        run: cmake ${{github.workspace}} -B ${{github.workspace}}/build -D PRINT_VERSION=${{ steps.get_version.outputs.version }}
+        run: cmake ${{github.workspace}} -B ${{github.workspace}}/build -D PRINT_VERSION=${GITHUB_REF_NAME#v}
 
       - name: Build ConceptualExample
         run: cmake --build ${{github.workspace}}/build
