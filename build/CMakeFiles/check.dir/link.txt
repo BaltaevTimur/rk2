@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/check.dir/test.cpp.o -o check  libConceptualExample.a lib/libgtest_main.a -lgcov lib/libgtest.a -lpthread 
