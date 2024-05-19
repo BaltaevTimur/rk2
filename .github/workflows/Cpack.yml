@@ -12,8 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Get Version
+        id: get_version
+        run: echo "::set-output name=version::${GITHUB_REF#refs/tags/v}"
+
       - name: Config ConceptualExample
-        run: cmake ${{github.workspace}} -B ${{github.workspace}}/build -D PRINT_VERSION=${{ github.ref_name.replace('refs/tags/v', '') }}
+        run: cmake ${{github.workspace}} -B ${{github.workspace}}/build -D PRINT_VERSION=${{ steps.get_version.outputs.version }}
 
       - name: Build ConceptualExample
         run: cmake --build ${{github.workspace}}/build
