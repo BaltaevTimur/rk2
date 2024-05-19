@@ -19,4 +19,4 @@ install(TARGETS example
 
 set(CPACK_PACKAGE_VERSION 1.0.0)
 
-include(CPack)
+include(CPack.cmake)
