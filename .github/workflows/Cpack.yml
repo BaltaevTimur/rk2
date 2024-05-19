@@ -28,3 +28,4 @@ jobs:
         with:
           artifacts: "build/*.deb,build/*.tar.gz,build/*.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
+ 
