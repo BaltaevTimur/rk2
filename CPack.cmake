@@ -18,13 +18,13 @@ jobs:
 	  run: cmake ${{github.workspace}} -B ${{github.workspace}}/build -D PRINT_VERSION=${GITHUB_REF_NAME#v}
     
 	- name: Build ConceptualExample
-	  run: cmake --build ${{github.workspace}}/build1
+	  run: cmake --build ${{github.workspace}}/build
 
     - name: Build package
-      run: cmake --build ${{github.workspace}}/build1 --target package
+      run: cmake --build ${{github.workspace}}/build --target package
 
     - name: Build source package
-      run: cmake --build ${{github.workspace}}/build1 --target package_source
+      run: cmake --build ${{github.workspace}}/build --target package_source
 
     - name: Make a release
       uses: ncipollo/release-action@v1.10.0
