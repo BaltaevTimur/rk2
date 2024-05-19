@@ -10,3 +10,8 @@ TEST(ConcreteProductB1, example){
 	ConcreteProductB1 test;
 	ASSERT_EQ(test.usefulFunctionB(), "The result of the product B1.");	
 }
+
+TEST(ConcreteProductB2, example){
+	ConcreteProductB2 test;
+	ASSERT_EQ(test.usefulFunctionB(), "The result of the product B2.");	
+}
