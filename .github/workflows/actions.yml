@@ -6,5 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: test
-        run: ./.github/workflows/test.sh
+      - name: config example
+        run: cmake -H. -B ${{github.workspace}}/build
+      - name: config example
+        run: cmake --build ${{github.workspace}}/build
