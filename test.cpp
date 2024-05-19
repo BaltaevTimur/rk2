@@ -1,4 +1,4 @@
-#include </home/timur/BaltaevTimur/workspace/rk2/AbstractFactory/ConceptualExample.cpp>
+#include <ConceptualExample.cpp>
 #include <gtest/gtest.h>
 
 TEST(ConcreteProductA1, example){
